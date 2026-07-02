@@ -90,13 +90,23 @@ strong { font-weight: 720; }
 }
 
 
-.language-nav {
+.topbar {
   display: flex;
-  justify-content: flex-end;
-  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   margin-bottom: 34px;
 }
-.language-nav a {
+.topbar a {
+  text-decoration: none;
+}
+.home-link {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 620;
+  letter-spacing: 0;
+}
+.language-link {
   min-height: 34px;
   display: inline-flex;
   align-items: center;
@@ -108,19 +118,19 @@ strong { font-weight: 720; }
   font-size: 13px;
   font-weight: 650;
   line-height: 1.35;
-  text-decoration: none;
 }
-.language-nav a:hover,
-.language-nav a:focus-visible {
+.home-link:hover,
+.home-link:focus-visible,
+.language-link:hover,
+.language-link:focus-visible {
+  color: var(--text);
+}
+.language-link:hover,
+.language-link:focus-visible {
   border-color: #cfc5b7;
   background: #fffdf8;
-  color: var(--text);
 }
-.language-nav a[aria-current="page"] {
-  border-color: #b9ad9d;
-  color: var(--text);
-}
-.language-nav a:focus-visible {
+.topbar a:focus-visible {
   outline: 2px solid #827d72;
   outline-offset: 3px;
 }
@@ -128,9 +138,9 @@ strong { font-weight: 720; }
 </head>
 <body>
 
-<nav class="language-nav" aria-label="Language">
-  <a href="../">English</a>
-  <a href="./" aria-current="page">한국어</a>
+<nav class="topbar" aria-label="Navigation">
+  <a class="home-link" href="https://onnelakin.github.io/ko/">ONNELLAB</a>
+  <a class="language-link" href="../">English</a>
 </nav>
 
 <h1>VaultXT 개인정보 처리방침</h1>
